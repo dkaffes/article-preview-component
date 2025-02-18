@@ -1,0 +1,282 @@
+/**************************/
+/* A Modern CSS Reset*/
+/* https://www.joshwcomeau.com/css/custom-css-reset/ */
+/* by Josh Comeau */
+/**************************/
+
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+
+body {
+  /* 3. Add accessible line-height */
+  line-height: 1.5;
+  /* 4. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 5. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 6. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 7. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* 8. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+/* 9. Create a root stacking context */
+/* This last one is optional. It's generally only needed if you use a JS framework like React. */
+/* #root,
+#__next {
+  isolation: isolate;
+} */
+/**************************/
+/**************************/
+/* Custom properties (variables) for colors */
+:root {
+  --very-dark-grayish-blue: hsl(217, 19%, 35%);
+  --desaturated-dark-blue: hsl(214, 17%, 51%);
+  --grayish-blue: hsl(212, 23%, 69%);
+  --light-grayish-blue: hsl(210, 46%, 95%);
+  --white: hsl(0, 0%, 100%);
+}
+
+/* General component styling */
+body {
+  font-family: "Manrope", sans-serif;
+  font-size: 0.8125rem; /* 13px */
+  font-weight: 500; /* medium */
+  min-height: 100vh;
+  background-color: var(--light-grayish-blue);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.component {
+  max-width: 26rem;
+  background-color: var(--white);
+  border-radius: 15px;
+  box-shadow: 0px 0px 20px var(--desaturated-dark-blue);
+  overflow: hidden;
+}
+
+.hidden {
+  display: none;
+}
+
+.flex {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.share-content-wrapper-bg {
+  background-color: var(--very-dark-grayish-blue);
+}
+
+.share-btn-bg {
+  background-color: var(--grayish-blue);
+}
+
+/* Info box */
+.info-box {
+  padding: 2rem 2rem 1rem;
+}
+
+.title {
+  margin-block-end: 1rem;
+  font-weight: 700; /* bold */
+  /* font-size: 0.75rem; 12px */
+}
+
+.description {
+  color: var(--desaturated-dark-blue);
+  line-height: 1.7rem;
+}
+
+/* Card footer box */
+.card-footer-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  height: 5rem;
+  padding: 2rem 2rem 3rem;
+}
+
+/* Author wrapper */
+.author-wrapper {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.author-avatar {
+  border-radius: 50%;
+  height: 50px;
+}
+
+.author-name {
+  font-weight: 700;
+}
+
+.author-date {
+  display: block;
+  color: var(--desaturated-dark-blue);
+  font-weight: 500;
+}
+
+/* Share wrapper */
+.share-wrapper {
+  width: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.share-content-wrapper {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 5rem;
+  width: 100%;
+  padding-left: 1.5rem;
+}
+.share-icon-list {
+  padding-left: 0;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.share-text {
+  text-transform: uppercase;
+  font-size: 0.6875rem; /*11px*/
+  letter-spacing: 0.3rem;
+  color: var(--grayish-blue);
+}
+
+.share-icon-list-item {
+  list-style-type: none;
+}
+
+/* Share button */
+.share-btn-wrapper {
+  z-index: 1;
+}
+
+.share-btn {
+  border: none;
+  cursor: pointer;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Footer */
+.attribution {
+  font-size: 0.6875rem; /*11px*/
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/**************************/
+/* MEDIA QUERIES */
+/* changing the component layout to a 2-column grid at 768px and changing the share content wrapper position*/
+/**************************/
+@media (min-width: 48rem) {
+  .component {
+    max-width: 50rem;
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+  }
+
+  .image-box-img {
+    height: 100%;
+    object-fit: cover;
+    object-position: left;
+  }
+
+  .card-footer-box {
+    position: unset;
+  }
+
+  .share-wrapper {
+    position: relative;
+  }
+
+  .share-content-wrapper {
+    height: 3rem;
+    width: 14rem;
+    /* left: -100px; */
+    left: 50%;
+    transform: translateX(-50%);
+    top: -70px;
+    border-radius: 10px;
+    padding: 0 1.5rem;
+  }
+  /* Add a triangle below the share content wrapper pop-up */
+  .share-content-wrapper:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 0.7rem solid transparent;
+    border-right: 0.7rem solid transparent;
+    border-top: 0.7rem solid var(--very-dark-grayish-blue);
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}

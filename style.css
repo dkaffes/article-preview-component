@@ -240,6 +240,7 @@ body {
     max-width: 50rem;
     display: grid;
     grid-template-columns: 2fr 3fr;
+    overflow: visible;
   }
 
   .image-box-img {

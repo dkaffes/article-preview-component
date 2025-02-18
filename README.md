@@ -67,7 +67,7 @@ In this way, in mobile view the revealable content `share-content-wrapper` is po
 ### Continued development
 
 - Include the necessary accessibility elements in the component.
-- Revealable content should overflow the component's boundary on desktop view (z-index issue?).
+- Revealable content is not perfectly center above the share icon.
 - The color of the arrow icon should change when the icon is pressed.
 
 ### Useful resources

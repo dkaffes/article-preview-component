@@ -67,7 +67,10 @@ In this way, in mobile view the revealable content `share-content-wrapper` is po
 ### Continued development
 
 - Include the necessary accessibility elements in the component.
-- Revealable content is not perfectly center above the share icon.
+  - `aria-haspopup`, `aria-expanded`, `aria-labelledby` attributes were added to the `share-btn`.
+  - `role` attribute with the values of `menu` and `menuitem` were given respectively to the `share-content-wrapper` and the three `share-icon-list-item`s
+  - The `script.js` was updated to toggle the above `aria-expanded` attribute depending on the state of the popup.
+- Revealable content is not perfectly centered above the share icon. (fixed)
 - The color of the arrow icon should change when the icon is pressed.
 
 ### Useful resources

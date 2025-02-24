@@ -31,7 +31,7 @@
           <img
             class="image-box-img"
             src="./images/drawers.jpg"
-            alt="Detail of green drawers"
+            alt="Detail of a chest of green drawers in front of a white brick wall"
           />
         </div>
 
@@ -64,37 +64,44 @@
             </div>
 
             <div class="share-wrapper">
-              <div class="share-content-wrapper hidden">
-                <h2 class="share-text">Share</h2>
+              <div class="share-content-wrapper hidden" role="menu">
+                <h2 id="share-txt-label" class="share-text">Share</h2>
+                <!-- does the following line needs role="group" attribute? -->
                 <ul class="share-icon-list">
                   <li class="share-icon-list-item">
-                    <a href="#"
+                    <a href="#" role="menuitem"
                       ><img
                         class="share-social-icon"
                         src="./images/icon-facebook.svg"
-                        alt=""
+                        alt="Share on Facebook"
                     /></a>
                   </li>
                   <li class="share-icon-list-item">
-                    <a href="#"
+                    <a href="#" role="menuitem"
                       ><img
                         class="share-social-icon"
                         src="./images/icon-twitter.svg"
-                        alt=""
+                        alt="Share on X"
                     /></a>
                   </li>
                   <li class="share-icon-list-item">
-                    <a href="#"
+                    <a href="#" role="menuitem"
                       ><img
                         class="share-social-icon"
                         src="./images/icon-pinterest.svg"
-                        alt=""
+                        alt="Share on Pinterest"
                     /></a>
                   </li>
                 </ul>
               </div>
               <div class="share-btn-wrapper">
-                <button class="share-btn">
+                <button
+                  aria-haspopup="menu"
+                  aria-expanded="false"
+                  aria-labelledby="share-txt-label"
+                  type="button"
+                  class="share-btn"
+                >
                   <img
                     class="share-btn-img"
                     src="./images/icon-share.svg"

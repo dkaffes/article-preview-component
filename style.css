@@ -174,7 +174,6 @@ body {
 
 /* Share wrapper */
 .share-wrapper {
-  width: 35px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -260,7 +259,6 @@ body {
   .share-content-wrapper {
     height: 3rem;
     width: 14rem;
-    /* left: -100px; */
     left: 50%;
     transform: translateX(-50%);
     top: -70px;

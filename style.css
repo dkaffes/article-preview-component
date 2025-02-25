@@ -109,13 +109,10 @@ body {
   display: none;
 }
 
-.flex {
+.open {
   display: flex;
   gap: 1rem;
   align-items: center;
-}
-
-.share-content-wrapper-bg {
   background-color: var(--very-dark-grayish-blue);
 }
 
@@ -146,8 +143,7 @@ body {
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  height: 5rem;
-  padding: 2rem 2rem 3rem;
+  padding: 1rem 2rem;
 }
 
 /* Author wrapper */
@@ -159,7 +155,7 @@ body {
 
 .author-avatar {
   border-radius: 50%;
-  height: 50px;
+  height: 3rem;
 }
 
 .author-name {
@@ -187,6 +183,7 @@ body {
   width: 100%;
   padding-left: 1.5rem;
 }
+
 .share-icon-list {
   padding-left: 0;
   display: flex;

@@ -116,8 +116,12 @@ body {
   background-color: var(--very-dark-grayish-blue);
 }
 
-.share-btn-bg {
+.share-btn-active {
   background-color: var(--grayish-blue);
+}
+
+.share-btn-img-active {
+  filter: brightness(500%);
 }
 
 /* Info box */
@@ -216,6 +220,16 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: all 0.3s;
+}
+
+/* Button hover state */
+.share-btn:hover {
+  background-color: var(--grayish-blue);
+}
+
+.share-btn:hover .share-btn-img {
+  filter: brightness(500%);
 }
 
 /* Footer */
@@ -263,7 +277,7 @@ body {
     padding: 0 1.5rem;
   }
   /* Add a triangle below the share content wrapper pop-up */
-  .share-content-wrapper:before {
+  .share-content-wrapper::before {
     content: "";
     position: absolute;
     width: 0;
